@@ -1,0 +1,20 @@
+<div class="elements__container">
+  <table class="tb-primary">
+    <tbody class="tb-description">
+      <tr *ngIf="(qtd!=0)">
+        <td class="product-check"><input type="checkbox"></td>
+        <td class="prod">
+          <a [routerLink]="['content', id]"><img src="{{prodImg}}" alt="Img Prod" class="img-prod"></a>
+          <a [routerLink]="['content', id]"><p>{{prodName}}</p></a>
+        </td>
+        <td class="qtd">
+          <button (click)="decreaseQtd()" class="change">-</button>
+          <p>{{qtd}}</p>
+          <button (click)="increaseQtd()" class="change">+</button>
+        </td>
+        <td>R$ {{formatBrl.formatBrl(price)}}</td>
+        <td>R$ {{formatBrl.formatBrl(priceTotal)}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

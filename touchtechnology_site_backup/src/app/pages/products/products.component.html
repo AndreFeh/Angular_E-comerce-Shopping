@@ -1,0 +1,15 @@
+<div class="produts__container">
+  <div class="produts__elements" >
+
+    <app-mini-cards
+    *ngFor="let prod of produtosData"
+    [id]="prod.id"
+    [img]="prod.imagem"
+    [titulo]= "prod.titulo"
+    [descricao]= "prod.descricao"
+    [oldPrice] = "prod.valor"
+    [currentPrice] = "prod.valor"
+  />
+
+  </div>
+</div>

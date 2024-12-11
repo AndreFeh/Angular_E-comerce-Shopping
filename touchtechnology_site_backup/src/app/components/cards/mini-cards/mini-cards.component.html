@@ -1,0 +1,29 @@
+
+<div class="mini__container">
+  <div class="mini__general">
+    <a [routerLink]="['/content', id]" >
+      <div class="mini__img">
+        <img src={{img}} alt={{titulo}}>
+      </div>
+      <div class="mini__content">
+        <!-- ADICIONARR QUANTIDADE DE VENDAS OU CLICKS -->
+        <h3>{{titulo}}</h3>
+        <p>{{descricao}}</p>
+        <div class="content-price">
+          <p>R$ {{formatBrl.formatBrl(currentPrice)}}</p>
+          <span *ngIf="oldPrice > 0"> R$ {{formatBrl.formatBrl(oldPrice)}}</span>
+        </div>
+      </div>
+      <div class="mini__opt">
+        <ul>
+            <li>
+              <button>
+                <a [routerLink]="['content',id]"></a>{{options[0]}}</button>
+
+                <button (click)="handleOption(options[1])">{{options[1]}}</button>
+            </li>
+        </ul>
+      </div>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,99 @@
+app-destaques {
+  margin: 0; /* Zera margens */
+  padding: 0; /* Zera espaçamento interno */
+  flex: 0 1 auto;
+  width: 380px;
+  /* @media screen and (max-width: 1080px)   {
+    width: 380px;
+  }*/
+
+  height: auto;
+}
+
+
+.main__container{
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  width: 99.9%;
+  justify-content: space-between;
+
+}
+
+.content{
+  /* border: 1px solid green; */
+
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
+
+
+  text-align: center;
+  justify-content:space-between;
+  justify-items: center;
+  align-content: center;
+}
+
+.content > h1{
+  margin-top: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-shadow: 0px 1px 5px aqua;
+}
+
+.content> p{
+  margin-top: 20px;
+  font-size: 15px;
+  color: white;
+  text-shadow: 0px 1px 1px black;
+
+}
+
+.type{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.type > button{
+  background-color: red;
+  border: 1px solid rgb(139, 0, 0);
+  width: 200px;
+  height: 50px;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 12px;
+  border-radius: 10px;
+}
+
+
+.type > button:hover{
+  font-weight: bold;
+}
+
+.type > button:active{
+  position: relative;
+  border: 0;
+  transform: scale(1.05);
+}
+
+.main__cards{
+  display: flex;
+  flex-direction: column;
+  width: 99.9%;
+  background-color: transparent ;
+  align-items: center;
+
+}
+
+.cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Ajusta a distribuição dos cards */
+  max-width: 90%;
+
+
+}

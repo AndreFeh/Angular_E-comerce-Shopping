@@ -1,0 +1,51 @@
+app-mini-cards {
+  display: inline-block;
+  width: 200px; /* Tamanho definido */
+  min-height: 100px;
+
+}
+
+.categories__container{
+  min-height:300px;
+  display: flex;
+  flex-direction: column;
+  width: 99.9%;
+  margin-top: 80px;
+  padding-top: 20px;
+  background-color: rgb(233, 233, 233);
+  border-radius: 20px;
+}
+
+.categories__content{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+
+}
+
+.categories__content > h2{
+  margin-left: 20px;
+}
+
+.categories__content > h2 > a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.content__cards{
+  padding: 20px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Permite que os itens "quebrem" para a próxima linha */
+  justify-content: space-around;
+
+  gap: 20px; /* Espaçamento entre os cards */
+  min-height: 300px;
+  max-width: 100%;
+  width: auto;
+
+
+}

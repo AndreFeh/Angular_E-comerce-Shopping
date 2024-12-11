@@ -1,0 +1,40 @@
+<div class="content__container">
+  <div class="content__content">
+    <div class="content__elements" >
+      <!-- <button><a [routerLink]="['']"><< VOLTAR</a></button> -->
+
+      <div class="content__cover">
+        <img src="{{ img }}" alt="">
+      </div>
+      <div class="content__title">
+        <h1>{{ titulo }}</h1>
+      </div>
+      <div class="content__price">
+        <span class="old-price" *ngIf="oldPrice>0">R$ {{formatBrl.formatBrl(oldPrice)}}</span>
+        <h3 class="current-price">R$ {{formatBrl.formatBrl(currentPrice)}}</h3>
+      </div>
+    </div>
+    <div class="content__shopping">
+      <ul>
+        <li>
+          <button>
+            <a href=#>Comprar</a>
+          </button>
+        </li>
+          <li>
+            <button (click)="addToCart()"> Adicionar ao Carrinho</button>
+          </li>
+      </ul>
+    </div>
+    <div class="content__description">
+      <p>{{ descricao }} Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ipsa, dignissimos laborum ratione, dolores, iste eos pariatur fuga accusantium sunt nulla commodi quis voluptatem. Molestias officiis earum non, excepturi quam libero ad! Repellat earum eos exercitationem cum architecto magnam dolore dolorum eligendi itaque neque voluptatem, dolores ducimus doloribus officiis omnis. Maiores, atque nesciunt minima debitis voluptate id, optio impedit iure ea nisi accusamus laboriosam dolor dicta illo iusto eos asperiores vero facere dolore iste tempore dolores veritatis! Voluptas magni corporis aut, amet dolor molestiae eum necessitatibus repellendus, ex explicabo aspernatur!</p>
+    </div>
+  </div>
+</div>
+<!--
+id
+img
+titulo
+descricao
+
+ -->

@@ -1,0 +1,15 @@
+app-mini-cards{
+  margin: 20px;
+}
+
+.produts__container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+}
+
+.produts__elements{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

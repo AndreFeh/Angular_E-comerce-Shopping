@@ -1,0 +1,76 @@
+
+.destaque__container{
+  display: flex;
+  flex-direction: column;
+  width: 90%; /*Caso a tela fique menor*/
+  max-width: 400px; /* Limita o tamanho máximo do card */
+  height: 200px; /* Permite altura variável */
+
+
+  flex: 0 1 calc(33.333% - 20px); /* Cada card ocupa 1/3 da largura, menos o gap */
+  padding: 15px;
+  border-radius: 20px;
+  background-color: rgba(192, 192, 192, 0.5);
+  box-sizing: border-box; /* Inclui padding e borda no cálculo de largura */
+  margin: 20px;
+}
+
+
+
+.content{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.left{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  width: 70%;
+
+  justify-content: space-around; /*ALINHA VERTICALMENTE*/
+
+}
+
+.left>h2{
+  font-weight: 500;
+}
+
+.left>span{
+  font-size: 13px;
+
+}
+
+.left>a{
+  font-style: oblique;
+  color: inherit;
+  text-decoration: 2px underline red;
+}
+
+.left>a:active{
+  position: relative;
+  transform: scale(1.05);
+  left: 0;
+}
+
+.left>a:hover{
+  font-weight: bold;
+}
+
+.right{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /*ALINHA HORIZONTALMENTE*/
+  justify-content: flex-start; /*ALINHA VERTICALMENTE*/
+  width: 20%;
+}
+
+.right > img{
+  width: 30px;
+  height: 30px;
+}
+

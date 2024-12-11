@@ -1,0 +1,44 @@
+/* Tabela */
+table {
+  min-width: 600px;
+  width: auto;
+  border-collapse: collapse; /* Remove espaços entre bordas */
+  table-layout: auto; /* Colunas com largura consistente */
+  margin: 10px 0;
+}
+
+/* Cabeçalhos */
+thead th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  text-align: center; /* Centraliza o texto no cabeçalho */
+  padding: 10px;
+}
+
+.shopping__container{
+  margin-top: 85px;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
+}
+.shopping__info{
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  width: 60vw;
+  margin-left: 20px;
+
+}
+
+.resulted{
+  display: flex;
+  flex-direction: column;
+  /* position: absolute;
+  right: 0; */
+  border: 1px solid black;
+  min-width: 400px;
+  width: 30vw;
+  margin-right: 20px;
+
+}

@@ -1,0 +1,86 @@
+/* Tabela */
+table {
+  min-width: 600px;
+  width: auto;
+  border-collapse: collapse; /* Remove espaços entre bordas */
+  table-layout: auto; /* Colunas com largura consistente */
+  margin: 10px 0;
+}
+
+/* Cabeçalhos */
+/* thead th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  text-align: center; /* Centraliza o texto no cabeçalho */
+/*  padding: 10px;
+} */
+
+/* Células */
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Coluna Produto */
+.prod {
+  display: inline-block; /* Permite layout em linha sem flex */
+
+  text-align: left; /* Alinha o conteúdo à esquerda */
+  vertical-align: middle; /* Garante alinhamento vertical */
+  white-space: nowrap; /* Evita quebra de linha */
+  overflow: hidden;
+  width: 100%;
+}
+
+.prod > a > img {
+  float: left; /* Posiciona a imagem ao lado do texto */
+  margin-right: 10px; /* Espaço entre a imagem e o texto */
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.prod > a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.prod > a > p {
+  display: inline-block; /* Alinha o texto com a imagem */
+  margin: 0;
+  justify-content: center;
+  white-space: nowrap; /* Evita quebras no texto */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Trunca texto longo com reticências */
+}
+
+/* Quantidade */
+.qtd {
+  text-align: center; /* Centraliza todo o conteúdo */
+}
+
+.qtd button {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 0 5px; /* Espaço entre os botões */
+}
+
+.qtd button:hover {
+  background-color: #e0e0e0;
+}
+
+.qtd p {
+  display: inline-block; /* Coloca o texto em linha com os botões */
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+.change{
+  font-size: 15px;
+}

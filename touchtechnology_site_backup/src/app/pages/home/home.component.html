@@ -1,0 +1,40 @@
+
+<div class="home__container">
+  <app-main
+    [img]="'assets/img/Stamp_art_cover.jpg'"
+    [title]="'STAMP ART PRODUTOS PERSONALIZADOS'"
+    [phrase]="'Aqui Vestimos a Camisa da Empresa'"
+    [buttonProducts]="'QUEM SOMOS NÓS'"
+
+    [titleDst]="'Canecas '"
+    [descrptDst]="'Canecas de vários modelos'"
+    [typeDst]="['Canecas']"
+    [imgDst]="'https://www.elburrito.com/wp-content/themes/elburrito/images/testimonial.png'"
+
+    [titleDst1]="'Camisetas '"
+    [descrptDst1]="'Camisetas de vários modelos'"
+    [typeDst1]="['Camisetas']"
+    [imgDst1]="'https://www.elburrito.com/wp-content/themes/elburrito/images/testimonial.png'"
+
+    [titleDst2]="'Uniformes'"
+    [descrptDst2]="'Uniformes de vários modelos'"
+    [typeDst2]="['Uniformes']"
+    [imgDst2]="'https://www.elburrito.com/wp-content/themes/elburrito/images/testimonial.png'"
+    />
+    <div class="home__elements">
+      <app-categories/>
+    </div>
+    <div class="home__elements">
+      <app-mini-cards
+      *ngFor="let prod of produtosData"
+      [id]="prod.id"
+      [img]="prod.imagem"
+      [titulo]="prod.titulo"
+      [descricao]="prod.descricao"
+      [oldPrice]="prod.valor"
+      [currentPrice]="prod.valor"
+    />
+    </div>
+  <app-footer-bar/>
+
+</div>

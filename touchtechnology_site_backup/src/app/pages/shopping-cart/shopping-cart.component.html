@@ -1,0 +1,22 @@
+<div class="shopping__container">
+  <div class="shopping__info">
+    <div class="shopping__title">
+      <h2>My Shopping List </h2>
+    </div>
+    <app-elements
+      *ngFor="let product of cart "
+      [id]="product.id"
+      [prodImg]="product.imagem"
+      [prodName]="product.titulo"
+      [qtd]="product.qtd"
+      [price]="product.valor">
+    </app-elements>
+  </div>
+  <div class="resulted">
+    <app-resulted
+      [price]="totalPrice"
+      [qtd]="totalQtd"
+      [desc]="discount">
+    </app-resulted>
+  </div>
+</div>

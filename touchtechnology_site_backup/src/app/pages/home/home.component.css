@@ -1,0 +1,18 @@
+.home__container{
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: 5px;
+  max-width: 99.9vw; /* Impede vazamento */
+  max-height: 100vh;
+}
+
+.home__elements{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 0;
+  /* border: 1px solid greenyellow; */
+}

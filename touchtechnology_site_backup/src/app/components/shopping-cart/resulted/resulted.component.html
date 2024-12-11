@@ -1,0 +1,24 @@
+<div class="resulted__container">
+  <div class="tb-end">
+    <table>
+      <tr>
+        <th>Preço</th>
+          <td>R$ {{formatBrl.formatBrl(price) }}</td>
+        </tr>
+      <tr>
+        <th>Quantidade</th>
+        <td>{{qtd}}</td>
+      </tr>
+      <tr>
+        <th>Desconto</th>
+        <td>R$ - {{formatBrl.formatBrl(desc)}}</td>
+      </tr>
+      <tr class="total">
+        <th><h3>Total</h3></th>
+        <td>R$ {{formatBrl.formatBrl(total)}}</td>
+      </tr>
+    </table>
+    <button>Comprar</button>
+  </div>
+
+</div>
