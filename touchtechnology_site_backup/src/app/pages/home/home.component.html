@@ -1,7 +1,7 @@
 
 <div class="home__container">
   <app-main
-    [img]="'assets/img/Stamp_art_cover.jpg'"
+    [img]="'assets/img/wp.jpg'"
     [title]="'STAMP ART PRODUTOS PERSONALIZADOS'"
     [phrase]="'Aqui Vestimos a Camisa da Empresa'"
     [buttonProducts]="'QUEM SOMOS NÓS'"
@@ -21,10 +21,10 @@
     [typeDst2]="['Uniformes']"
     [imgDst2]="'https://www.elburrito.com/wp-content/themes/elburrito/images/testimonial.png'"
     />
-    <div class="home__elements">
+    <div class="home__categories">
       <app-categories/>
     </div>
-    <div class="home__elements">
+    <!-- <div class="home__elements">
       <app-mini-cards
       *ngFor="let prod of produtosData"
       [id]="prod.id"
@@ -34,7 +34,7 @@
       [oldPrice]="prod.valor"
       [currentPrice]="prod.valor"
     />
-    </div>
+    </div> -->
   <app-footer-bar/>
 
 </div>

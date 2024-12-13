@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ValuesService } from '../../../services/values.service';
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'app-elements',
@@ -9,59 +10,52 @@ import { ValuesService } from '../../../services/values.service';
 export class ElementsComponent implements OnInit{
 // [x: string]: any;
   @Input()
-  id:string="";
+  id:number=0;
   @Input()
   prodImg:string = "";
   @Input()
   prodName:string= "";
   @Input()
-  qtd:number = 0;
+  qtd:number=0;
   @Input()
-  price:number = 0;
+  price:number=0;
 
-  @Output() updatePrice = new EventEmitter<number>();
-  @Output() updateQtd = new EventEmitter<number>();
+  @Output()
+  updateQtd = new EventEmitter<number>();
 
+  constructor(public formatBrl:ValuesService, private cartService:CartService){}
   ngOnInit(): void {}
 
-  constructor(public formatBrl:ValuesService){}
-
-
+// Calcula o preço total baseado na quantidade
   get priceTotal() : number {
     return this.price * this.qtd;
   }
 
+  // // Método chamado para alterar a quantidade
+  // changeQtd(newQtd: number) {
+  //   if (newQtd >= 0) {
+  //     this.qtd = newQtd; // Atualiza a quantidade local
+  //     this.updateQtd.emit(this.qtd); // Emite a nova quantidade para o componente pai
+  //   }
+  // }
+  /** NAO DA CERTO POR QUE NAO FAZ AJUSTES NOS BOTOES */
+
 
   increaseQtd(){
     this.qtd++;
-    this.updateQtd.emit(this.qtd);
-
+    this.cartService.incrementToCart(this.id);
   }
 
   decreaseQtd(){
-    if(this.qtd===1){
+    if (this.qtd===1){
       const confirmRm = window.confirm("Remover Item?");
-      if(confirmRm == true){
-        this.qtd--;
-        this.updateQtd.emit(this.qtd);
-
-      } else return;
-    } else {
-      this.qtd--;
-      this.updateQtd.emit(this.qtd);
+      if (confirmRm === true){
+        this.cartService.decrementToCart(this.id); // ATUALIZA NO SERVICE
+        this.qtd = 0; // ATUALIZA NO COMPONENT
+      } else /*return this.qtd = 1*/;
+    } else {/*  SE QUANTIDADE FOR MAIOR QUE 1, REDUZA */
+      this.qtd--; // ATUALIZA NO COMPONENT
+      this.cartService.decrementToCart(this.id); // ATUALIZA NO SERVICE
     }
   }
-
-  increasePrice() {
-    this.price++;
-    this.updatePrice.emit(this.price);
-  }
-
-  decreasePrice() {
-    if (this.price > 0) {
-      this.price--;
-      this.updatePrice.emit(this.price);
-    }
-  }
-
 }

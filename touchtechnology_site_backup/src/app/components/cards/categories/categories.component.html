@@ -12,10 +12,14 @@
     <div class="content__cards">
       <!-- Exibindo os produtos da categoria selecionada -->
       <div *ngFor="let product of selectedProducts">
-        <img [src]="product.imagem" alt="{{ product.titulo }}" />
-        <h3>{{ product.titulo }}</h3>
-        <p>{{ product.descricao }}</p>
-        <p>{{ product.valor | currency:'BRL' }}</p>
+        <app-mini-cards
+        [id]="product.id"
+        [img]="product.imagem"
+        [titulo]="product.titulo"
+        [descricao]="product.descricao"
+        [oldPrice]="product.valor"
+        [currentPrice]="product.valor"
+      />
       </div>
     </div>
   </div>

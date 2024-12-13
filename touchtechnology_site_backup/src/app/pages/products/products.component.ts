@@ -9,24 +9,28 @@ import { ValuesService } from '../../services/values.service';
   styleUrl: './products.component.css'
 })
 export class ProductsComponent implements OnInit{
-  category = produtosData[0].categorias;
-  produtosData = produtosData[0].categorias.flatMap(
-    (cat)=> Object.values(cat)
-    ).filter(
-      (value)=>Array.isArray(value)
-      ).flat();
+  category:any[] = [];
+  produtosData:any[] = []
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.category = produtosData[0].categorias;
+    this.produtosData = this.category
+      .flatMap((cat) => Object.values(cat))
+      .filter((value) => Array.isArray(value))
+      .flat();
+  }
 
   constructor(
-    private cartService: CartService,
+    // private cartService: CartService,
     public formatBrl:ValuesService
   ){}
 
-  addToCart(product:any){
-    this.cartService.addToCart({...product, qtd:1});
-    alert(`${product.titulo} foi adicionado ao carrinho!`);
-  }
+
+  // TA PUXANDO NO MINI CARD
+  // addToCart(product:any){
+  //   this.cartService.addToCart({...product, qtd:1});
+  //   alert(`${product.titulo} foi adicionado ao carrinho!`);
+  // }
 
 
 }

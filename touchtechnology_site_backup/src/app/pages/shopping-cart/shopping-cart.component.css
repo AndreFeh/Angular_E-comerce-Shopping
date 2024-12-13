@@ -1,44 +1,50 @@
-/* Tabela */
-table {
-  min-width: 600px;
-  width: auto;
-  border-collapse: collapse; /* Remove espaços entre bordas */
-  table-layout: auto; /* Colunas com largura consistente */
-  margin: 10px 0;
+app-elements{
+  width: 60vw;}
+app-resulted{
+  width: 20vw;
+  height: 300px;
+  margin: 20px;
+  /* border: 1px solid green; */
 }
-
-/* Cabeçalhos */
-thead th {
-  background-color: #f4f4f4;
-  font-weight: bold;
-  text-align: center; /* Centraliza o texto no cabeçalho */
-  padding: 10px;
-}
-
 .shopping__container{
   margin-top: 85px;
   display: flex;
   flex-direction: row;
-  width: 90%;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.shopping__title>h2{
+  margin:20px 20px
 }
 .shopping__info{
   display: flex;
   flex-direction: column;
-  min-width: 400px;
-  width: 60vw;
-  margin-left: 20px;
-
+  position: absolute;
+  left: 50px;
+  width: auto;
+  min-width: 50%;
+  min-height: 80vh;
+  margin: 10px 20px;
+  border-radius: 20px;
+  border: 3px solid rgb(87, 87, 87);
+  background-color: silver;
 }
 
 .resulted{
   display: flex;
   flex-direction: column;
+  height: 300px;
+  position: fixed;
+  right: 50px;
+  top: 90px;
   /* position: absolute;
   right: 0; */
-  border: 1px solid black;
-  min-width: 400px;
-  width: 30vw;
-  margin-right: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px;
+  border-radius: 20px;
+  border: 3px solid rgb(87, 87, 87);
+  background-color: silver;
 
 }

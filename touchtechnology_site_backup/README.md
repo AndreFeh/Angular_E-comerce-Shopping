@@ -25,3 +25,40 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Commands necessaries
+
+> CART SERVICE
+
+  addToCart(product: any)
+
+  Adiciona um produto ao carrinho.
+  Se o produto já existir, incrementa a quantidade.
+  Caso contrário, adiciona o produto como um novo item no carrinho.
+  getCart()
+
+  Retorna todos os itens atualmente no carrinho.
+  updateQtd(productId: number, qtd: number)
+
+  Atualiza a quantidade de um produto baseado no id.
+  Remove o produto automaticamente do carrinho se a quantidade for menor que 1.
+  removeFromCart(productId: number)
+
+  Remove diretamente o produto do carrinho com base no id.
+  clearCart()
+
+  Esvazia completamente o carrinho.
+
+------------------------
+O carrinho carrega os produtos corretamente?
+  Sim, usando this.service.getCart().subscribe(...).
+
+Os totais (preço e quantidade) são atualizados corretamente?
+  Sim, com calculateTotal sendo chamado sempre que os dados mudam.
+
+O <app-resulted> exibe os valores atualizados?
+  Sim, com os bindings [price], [qtd], e [desc].
+
+As mudanças no <app-elements> refletem no carrinho?
+  Sim, graças ao (updateQtd).
+

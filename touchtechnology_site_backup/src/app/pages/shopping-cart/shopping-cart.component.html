@@ -4,19 +4,20 @@
       <h2>My Shopping List </h2>
     </div>
     <app-elements
-      *ngFor="let product of cart "
-      [id]="product.id"
-      [prodImg]="product.imagem"
+    *ngFor="let product of products "
+    [id]="product.id"
+      [prodImg]="product.img"
       [prodName]="product.titulo"
       [qtd]="product.qtd"
-      [price]="product.valor">
-    </app-elements>
+      [price]="product.valor"
+      (updateQtd)="updateQtd(product.id, $event)"
+      />
   </div>
   <div class="resulted">
     <app-resulted
       [price]="totalPrice"
       [qtd]="totalQtd"
-      [desc]="discount">
+      [desc]=0>
     </app-resulted>
   </div>
 </div>

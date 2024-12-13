@@ -14,16 +14,19 @@
           <span *ngIf="oldPrice > 0"> R$ {{formatBrl.formatBrl(oldPrice)}}</span>
         </div>
       </div>
-      <div class="mini__opt">
-        <ul>
-            <li>
-              <button>
-                <a [routerLink]="['content',id]"></a>{{options[0]}}</button>
-
-                <button (click)="handleOption(options[1])">{{options[1]}}</button>
-            </li>
-        </ul>
-      </div>
     </a>
+
+    <div class="mini__opt">
+      <ul>
+          <li>
+            <button>
+              <a [routerLink]="['/content',id]">{{options[0]}}</a>
+            </button>
+          </li>
+          <li>
+            <button (click)="handleOption(options[1])">{{options[1]}}</button>
+          </li>
+      </ul>
+    </div>
   </div>
 </div>

@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ContentComponent implements OnInit{
   img!:string;
   currentPrice!:number;
-  oldPrice!:number;
+  oldPrice:number=10;
   titulo!:string;
   descricao!:string;
   private id:number|null=0;

@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CartService } from '../../../services/cart.service';
 import { ValuesService } from '../../../services/values.service';
-import { RedirectCommand } from '@angular/router';
-import { produtosData } from '../../../data/produtosData';
 
 @Component({
   selector: 'app-mini-cards',
@@ -22,7 +20,7 @@ export class MiniCardsComponent implements OnInit{
   currentPrice!:number;
   @Input()
   oldPrice!:number;
-  qtd:number=0;
+  qtd:number=1;
   options:string[]  = [ "Ver Produto", "Adicionar ao Carrinho"];
 
   constructor(private cartService: CartService, public formatBrl:ValuesService){}
@@ -43,10 +41,8 @@ export class MiniCardsComponent implements OnInit{
       valor:this.currentPrice,
       qtd:this.qtd,
     };
-    this.cartService.addToCart(product);
+    this.cartService.addToCart({...product});
     alert(`${this.titulo} foi adicionado ao carrinho!`);
     return
   }
-
-
 }
