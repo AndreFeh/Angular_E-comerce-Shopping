@@ -13,7 +13,7 @@ export class MainComponent implements OnInit{
   @Input()
   phrase:string="Implementando";
   @Input()
-  buttonProducts:string="Implementando";
+  buttonProducts:string="ABOUT US";
 
   @Input() titleDst:string="Implementando";
   @Input() descrptDst:string="Implementando";

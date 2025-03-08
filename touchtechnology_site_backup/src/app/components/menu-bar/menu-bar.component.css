@@ -3,14 +3,13 @@
   width: 99.9%;
   z-index: 1000;
   position: fixed;
-  border: 1px solid black;
   display: flex;
   flex-direction: row;
   height: 80px;
   align-items: center; /*ALINHA HORIZONTALMENTE*/
   justify-content: space-between; /*ALINHA VERTICALMENTE*/
-  background-color: rgba(0, 11, 109, 0.9);
-  color:white;
+  background-color: rgb(0, 255, 115);
+  color:black;
 
 }
 
