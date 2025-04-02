@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +18,10 @@ import { CategoriesComponent } from './components/cards/categories/categories.co
 import { ElementsComponent } from './components/shopping-cart/elements/elements.component';
 import { ResultedComponent } from './components/shopping-cart/resulted/resulted.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { CarouselEventsComponent } from './components/carousel-events/carousel-events.component';
+import { EventsComponent } from './pages/events/events.component';
+import { SuportComponent } from './components/about/suport/suport.component';
+import { ContactComponent } from './components/about/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -32,9 +38,14 @@ import { ProductsComponent } from './pages/products/products.component';
     CategoriesComponent,
     ElementsComponent,
     ResultedComponent,
-    ProductsComponent
+    ProductsComponent,
+    CarouselEventsComponent,
+    EventsComponent,
+    SuportComponent,
+    ContactComponent
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule
   ],

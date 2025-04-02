@@ -1,0 +1,84 @@
+.carousel__container {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, #05353d, #80e7d7, #6ecde9, #062f47 );
+  padding: 20px 0;
+}
+
+.carousel_components{
+  display: flex;
+  flex-direction: row;
+  margin: 30px 20px;
+  /* border: 1px solid red; */
+  color: white;
+}
+
+.carousel_components > a{
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+
+}
+
+
+.carousel_carousel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  min-width: 99.9%;
+  height: 600px;
+  overflow: hidden;
+
+}
+
+.carousel_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+
+}
+
+.carousel_content > img {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: contain;
+  opacity: 85%;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Barra de progresso */
+.progress-bar {
+  width: 50vw;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+
+}
+
+.progress {
+  height: 100%;
+  background: #000000;
+  transition: width 1s linear;
+}

@@ -1,7 +1,7 @@
-<div class="home__container">
+<div class="home__container" [ngClass]="{ 'fixed': isFixed }" >
   <div class="home__logo">
     <a [routerLink]="['']" rel="noopener noreferrer">
-      <img src="assets/img/Stamp_art_cover.jpg" alt="" srcset="">
+      <img [src]="logoPage" alt="Logo">
     </a>
   </div>
   <div class="home__search">
@@ -14,14 +14,17 @@
   </div>
   <div class="home__opt">
     <ul>
+      <a [routerLink]="['']">
+        <li>StampArt</li>
+      </a>
       <a [routerLink]="['products']">
-        <li>Products</li>
+        <li>Produtos</li>
       </a>
       <a [routerLink]="['shopping-cart']">
-        <li>Shopping Cart</li>
+        <li>Carrinho</li>
       </a>
       <a [routerLink]="['about']">
-        <li>About Us</li>
+        <li>Sobre Nós</li>
       </a>
     </ul>
 

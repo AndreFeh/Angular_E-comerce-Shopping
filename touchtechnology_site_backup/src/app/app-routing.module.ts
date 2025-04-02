@@ -6,6 +6,7 @@ import { AboutCompanyComponent } from './pages/about-company/about-company.compo
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { CategoriesComponent } from './components/cards/categories/categories.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { EventsComponent } from './pages/events/events.component';
 
 const routes: Routes = [
   {path: '', component:HomeComponent, pathMatch:"full"},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'about', component:AboutCompanyComponent, pathMatch:"prefix"},
   {path: 'products', component:ProductsComponent, pathMatch:"prefix"},
   {path: 'category', component:CategoriesComponent, pathMatch:"prefix"},
+  {path: 'events', component:EventsComponent, pathMatch:"prefix"},
   {path:'**', redirectTo:''}
 ];
 
