@@ -6,7 +6,6 @@
     <app-elements
     *ngFor="let product of products "
     [id]="product.id"
-      [prodImg]="product.img"
       [prodName]="product.titulo"
       [qtd]="product.qtd"
       [price]="product.valor"
@@ -14,10 +13,6 @@
       />
   </div>
   <div class="resulted">
-    <app-resulted
-      [price]="totalPrice"
-      [qtd]="totalQtd"
-      [desc]=0>
-    </app-resulted>
+    <app-resulted [cartItems]="products" [totalPrice]="totalPrice"></app-resulted>
   </div>
 </div>

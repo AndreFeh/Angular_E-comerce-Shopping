@@ -22,6 +22,7 @@ import { CarouselEventsComponent } from './components/carousel-events/carousel-e
 import { EventsComponent } from './pages/events/events.component';
 import { SuportComponent } from './components/about/suport/suport.component';
 import { ContactComponent } from './components/about/contact/contact.component';
+import { ContatoWhatsappComponent } from './components/buttons/contato-whatsapp/contato-whatsapp.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ContactComponent } from './components/about/contact/contact.component';
     CarouselEventsComponent,
     EventsComponent,
     SuportComponent,
-    ContactComponent
+    ContactComponent,
+    ContatoWhatsappComponent
   ],
   imports: [
     ReactiveFormsModule,

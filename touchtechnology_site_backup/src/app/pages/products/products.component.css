@@ -5,7 +5,11 @@ app-mini-cards{
 .produts__container{
   display: flex;
   flex-direction: column;
-  margin-top: 90px;
+
+  background: linear-gradient(to right, #05353d, #80e7d7, #6ecde9, #062f47 );
+  color: white;
+  text-shadow: 2px 2px 2px black;
+
 }
 
 .produts__elements{

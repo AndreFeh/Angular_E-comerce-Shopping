@@ -2,18 +2,29 @@
   display: flex;
   flex-direction: column;
   margin-top: auto;
-  margin-bottom: 5px;
-  max-width: 99.9vw; /* Impede vazamento */
-  max-height: 100vh;
+  max-width: 99vw; /* Impede vazamento */
+  overflow: hidden;
+  background: linear-gradient(to right, #05353d, #80e7d7, #6ecde9, #062f47 );
+  color: white;
+  text-shadow: 2px 2px 2px black;
 
 }
 
 .home__elements{
+  background-color: transparent;
   display: flex;
   flex-direction: row;
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 20px 0;
-  /* border: 1px solid greenyellow; */
+}
+
+.home__events{
+  background-color: transparent;
+  width: 100%; /* Impede vazamento */
+}
+.home__categories{
+  background-color: transparent;
+  width: 100%; /* Impede vazamento */
 }

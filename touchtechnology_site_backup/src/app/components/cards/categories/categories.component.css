@@ -8,15 +8,12 @@ app-mini-cards {
 
 /* Container das categorias */
 .categories__container{
-  background: linear-gradient(to right, #05353d, #80e7d7, #6ecde9, #062f47 );
-  color: white;
 
   min-height: 100px;
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 20px 20px;
-  background-color: rgb(233, 233, 233);
 }
 
 .categories__container > h1{

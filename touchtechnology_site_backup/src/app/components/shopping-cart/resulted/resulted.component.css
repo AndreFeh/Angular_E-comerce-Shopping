@@ -1,51 +1,81 @@
-
-.resulted__container{
-  min-width:10vw;
-  padding: 20px;
-  border-radius: 20px;
-  font-size: 15px;
+.resulted-container {
+  min-width: 10vw;
+  padding: 25px;
+  border-radius: 15px;
+  font-size: 14px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.tb-end table {
-  margin-top: 20px;
-  width: 100%;
-  text-align: center; /* Centraliza o conteúdo */
+.resulted-container ul {
+  list-style: none;
+  padding: 0;
 }
 
-.tb-end > table > tr> th{
-  text-align: left;
+.resulted-container li {
+  padding: 12px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background 0.3s ease;
 }
 
-.tb-end > table > tr> td{
-  text-align: right;
+.resulted-container li:hover {
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
-
-/* Destaque para o "Total" */
-.total {
-  margin: 100px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #000;
+.resulted-container a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
-/* Estilo para o botão */
-.tb-end button {
+.resulted-container a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.resulted_buttons button {
   width: 100%;
   margin-top: 15px;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: bold;
   color: white;
-  background-color: #007bff;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s;
 }
 
-.tb-end button:hover {
+.resulted_buttons button:nth-child(1) {
+  background-color: #25D366;
+}
+
+.resulted_buttons button:nth-child(1):hover {
+  background-color: #1ebe57;
+}
+
+.resulted_buttons button:nth-child(2) {
+  background-color: #007bff;
+}
+
+.resulted_buttons button:nth-child(2):hover {
   background-color: #0056b3;
 }
 
-.tb-end button:active {
-  transform: scale(1.1);
+.resulted_buttons button:active {
+  transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+  .resulted-container {
+    font-size: 13px;
+    padding: 15px;
+  }
+
+  .resulted-container button {
+    font-size: 14px;
+    padding: 10px 0;
+  }
 }

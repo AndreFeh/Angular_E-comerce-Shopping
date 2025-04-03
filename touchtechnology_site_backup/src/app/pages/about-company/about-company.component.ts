@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-about-company',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './about-company.component.css'
 })
 export class AboutCompanyComponent {
-
+@Input() presenting_img: string="assets/img/stamp_art_professional.png";
+@Input() missao: string="Nossa missao...";
+@Input() visao:string="Nossa vissao...";
+@Input() valores: string="Nossos valores...";
 }

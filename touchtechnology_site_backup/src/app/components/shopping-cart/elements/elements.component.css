@@ -1,64 +1,58 @@
-.elements__container{
+.elements__container {
   display: flex;
   flex-direction: column;
-  min-width: 600px;
+  min-width: 60%;
   overflow: hidden;
-
 }
 
-.elements__content{
+.elements__content {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
-  /* border-bottom: 1px solid black;
-  border-top: 1px solid black; */
   width: 100%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.486);
+  padding: 5px 10px; /* Reduzi o padding */
+  gap: 10px; /* Reduzi o espaço entre os elementos */
 }
 
-.product-check{
+/* Checkbox */
+.product-check {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0px 10px;
 }
 
 /* Coluna Produto */
 .elements__products {
-  width: 30vw;
+  display: flex;
+  align-items: center;
+  flex: 2; /* Permite que o nome do produto ocupe mais espaço */
 }
 
-.elements__products > a{
+.elements__products > a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: inherit;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-
-
+  width: 100%;
+  flex-wrap: nowrap;
 }
 
 .elements__products > a > img {
-  float: left; /* Posiciona a imagem ao lado do texto */
-  margin-right: 10px; /* Espaço entre a imagem e o texto */
   width: 50px;
   height: 50px;
   border-radius: 5px;
+  flex-shrink: 0;
 }
 
 .elements__products > a > p {
-  display: flex; /* Alinha o texto com a imagem */
-  text-align: left; /*Alinha o conteúdo à esquerda*/
-  justify-content: center;
-
+  flex: 1;
+  font-size: 14px;
+  font-weight: bold;
   overflow: hidden;
-  text-overflow: ellipsis; /*Se maior que isso, RETICENCIAS {...}*/
-  -webkit-line-clamp: 1; /*Somente 1 linha*/
-  -webkit-box-orient: vertical;
-  white-space: nowrap; /* Evita quebras no texto */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0 5px; /* Reduzi o espaçamento ao redor do texto */
 }
 
 /* Quantidade */
@@ -66,50 +60,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
-
+  gap: 5px;
 }
 
 .change {
-  margin: 0px 10px;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
+  width: 30px;
   height: 25px;
-
-  font-size: 18px;
+  font-size: 16px;
   background-color: #f4f4f4;
   border-radius: 5px;
   cursor: pointer;
+  text-align: center;
 }
 
 .change:hover {
   background-color: #e0e0e0;
   font-weight: 600;
-
 }
 
 .button-qtd p {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
   font-weight: bold;
 }
 
-.elements__price{
+/* Preços */
+.elements__price {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  gap: 5px;
 }
-.elements__price > h4{
-  margin: 0px 20px;
-}
-.elements__price > p{
-  margin: 0px 20px;
 
+.elements__price > h4,
+.elements__price > p {
+  margin: 0 5px; /* Reduzi a margem dos preços */
 }

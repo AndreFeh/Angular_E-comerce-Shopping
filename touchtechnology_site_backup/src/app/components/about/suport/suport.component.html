@@ -36,6 +36,23 @@
       </span>
     </div>
   </div>
+  <div class="support_items">
+    <p>Escolha o método de envio*</p>
+
+    <label>
+      <input type="radio" formControlName="metodoEnvio" value="whatsapp"> WhatsApp
+    </label>
+
+    <label>
+      <input type="radio" formControlName="metodoEnvio" value="email"> E-mail
+    </label>
+
+    <span *ngIf="supportForm.get('metodoEnvio')?.invalid && supportForm.get('metodoEnvio')?.touched" class="error">
+      Escolha um método de envio!
+    </span>
+  </div>
 
   <button type="submit" class="button_submit">Enviar</button>
+
+
 </form>
