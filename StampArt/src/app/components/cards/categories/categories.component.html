@@ -1,0 +1,29 @@
+<div class="categories__container">
+  <h1>Categorias</h1>
+  <div class="category__filter">
+    <!-- Botões para cada categoria -->
+    <button *ngFor="let category of categories; let i = index"
+            (click)="filterByCategory(i)"
+            [ngClass]="{'active': activeCategoryIndex === i}">
+      {{ category | titlecase }}
+    </button>
+  </div>
+
+  <!-- Exibe os produtos apenas se a categoria estiver ativa -->
+  <div class="categories__content" *ngIf="activeCategoryIndex !== null">
+    <h2>{{ categories[activeCategoryIndex] | titlecase }}</h2>
+    <div class="content__cards">
+      <!-- Exibindo os produtos da categoria selecionada -->
+      <div *ngFor="let product of selectedProducts">
+        <app-mini-cards
+          [id]="product.id"
+          [img]="product.imagem"
+          [titulo]="product.titulo"
+          [descricao]="product.descricao"
+          [oldPrice]="product.valor"
+          [currentPrice]="product.valor"
+        />
+      </div>
+    </div>
+  </div>
+</div>

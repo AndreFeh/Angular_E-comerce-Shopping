@@ -1,0 +1,44 @@
+.contact__container {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.contact__container > h1{
+  margin-bottom: 20px;
+}
+
+
+.contact_table {
+  border-collapse: collapse; /* Remove o espaço entre as células */
+  border-spacing: 0; /* Garante que não haja espaçamento extra */
+}
+
+.contact_table td {
+  padding: 5px 10px;
+  vertical-align: middle;
+}
+
+.contact_table td:first-child {
+  width: 30px; /* Define um tamanho fixo */
+  text-align: left; /* Alinha o texto à direita */
+  font-weight: 500;
+  white-space: nowrap; /* Evita que o texto quebre para a próxima linha */
+}
+
+.contact_table td a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact_table td a:hover {
+  font-weight: 500;
+}
+
+.contact_table td a:active {
+  color: blue;
+  font-weight: 700;
+}

@@ -1,0 +1,149 @@
+.mini__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 220px;
+  height: 400px;
+
+}
+
+.mini__general{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(153, 153, 153, 0.664);
+  border-radius: 15px;
+}
+
+.mini__general > a{
+  text-decoration: none;
+  color:inherit;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+.mini__img{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  width: 200px;
+  height: 200px;
+
+}
+.mini__img>img{
+  border-radius: 15px;
+  width: 90%;
+  height: 90%;
+  margin: auto;
+
+}
+
+.mini__content{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.mini__content > h3{
+  text-align: left;
+  font-weight: 600;
+  display: -webkit-box;
+  text-overflow: ellipsis; /*Se maior que isso, RETICENCIAS {...}*/
+  -webkit-line-clamp: 1; /*Somente 1 linha*/
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+.mini__content > p{
+  text-align: justify;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limita a 2 linhas */
+  -webkit-box-orient: vertical;
+
+}
+
+.content-price{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.content-price > p{
+  font-size: 15px;
+  }
+
+
+.content-price > span{
+  text-decoration: line-through;
+  color: rgb(112, 112, 112);
+}
+
+
+.mini__general:hover{
+  position: relative;
+  transform: scale(1.05);
+  transition: 0.8s;
+  background-color: rgb(195, 204, 195);
+}
+
+.mini__opt > ul{
+  margin-top: 10px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+.mini__opt > ul > li{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.mini__opt > ul > li > button{
+  /* text-decoration: none; */
+  color: inherit;
+  font-size: 10px;
+  width: 100px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.mini__opt > ul > li > button > a{
+  text-decoration: none;
+  color: inherit;
+
+}
+
+
+.mini__opt > ul > li > button:hover{
+  font-weight: 500;
+}
+
+.mini__opt > ul > li > button:active{
+  transform: scale(1.05);
+}
